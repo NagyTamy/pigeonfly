@@ -1,0 +1,19 @@
+<div *ngFor="let pigeon of pigeons" class="pigeon-display">
+  <div id="pigeon-text">
+    <h2>Name: {{pigeon.name}}</h2>
+    <p>Speed: {{pigeon.speed}}</p>
+    <p>Capacity: {{pigeon.carryingCapacity}}</p>
+    <ng-container *ngIf="!pigeon.isAvailable; then available; else notAvailable"></ng-container>
+
+    <ng-template #available>
+      <div style="color: green;">
+        Available
+      </div>
+    </ng-template>
+    <ng-template #notAvailable>
+      <div style="color: red;">
+        Not Available
+      </div>
+    </ng-template>
+  </div>
+</div>

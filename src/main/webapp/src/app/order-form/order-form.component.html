@@ -1,0 +1,20 @@
+<h3>Order your pigeon now!</h3><br>
+<form [formGroup]="orderForm" (ngSubmit)="onSubmit()">
+  <input type="text" formControlName="name" id="name" placeholder="Name">
+  <input type="text" formControlName="eMail" placeholder="E-mail">
+  <h3>Pick-up details</h3>
+  <input type="text" formControlName="pickUpCountry" placeholder="Country">
+  <input type="text" formControlName="pickUpCity" placeholder="City">
+  <input type="text" formControlName="pickUpAddress" placeholder="Address">
+  <h3>Delivery details</h3>
+  <input type="text" formControlName="deliveryCountry" placeholder="Country">
+  <input type="text" formControlName="deliveryCity" placeholder="City">
+  <input type="text" formControlName="deliveryAddress" placeholder="Address">
+  <br>
+  <h3>Pick your pigeon:</h3>
+    <select name="pigeon" formControlName="pigeonName">
+      <option *ngFor="let pigeon of pigeons" value="{{pigeon.id}}">{{pigeon.name}}</option>
+    </select>
+  <button type="submit" value="submit">Order!</button>
+</form>
+

@@ -1,0 +1,27 @@
+input[type = text] {
+  width: 100%;
+  margin: 5px auto;
+  border: 1px solid #66696d;
+}
+
+select{
+  width: 100%;
+  margin: 5px auto;
+  text-align: center;
+}
+
+h3{
+  font-weight: bold;
+  text-align: center;
+}
+
+button{
+  background: black;
+  color: #fc622b;
+  width: 50%;
+  margin-left: 25%;
+  border: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
